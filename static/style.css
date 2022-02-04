@@ -1,0 +1,19 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#app {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#accountinfo {
+  border: 1px solid black;
+  width: 50%;
+}

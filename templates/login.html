@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block head %}
+
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+{% block title %} Login Page {% endblock %} {% endblock %} {% block body %} {%
+with messages = get_flashed_messages() %} {% if messages %} {% for message in
+messages %}
+
+<div class="alert alert-success alert-dismissible">{{ message }}</div>
+
+Login Page {% endfor %} {% endif %} {% endwith %}
+<form action="#" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+      name="_name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Password"
+      name="_pass"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<h1>Not having an account ?</h1>
+<a href="{{ url_for('signuppage' ) }}">Click here to make one !</a>
+{% endblock %}
